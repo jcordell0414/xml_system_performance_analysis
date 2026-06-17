@@ -1,66 +1,95 @@
-# xml_system_performance_analysis
-System Performance Analysis Using XML and Power BI
+# 🖥️ System Performance Analysis (XML + Power BI)
+
+### Operational Analytics | XML · Power Query · Power BI · Python
+
+---
 
 ## Overview
 
-This project demonstrates an end-to-end operational analytics workflow using structured XML datasets and Power BI. The objective was to simulate system-performance monitoring commonly used in engineering and aerospace environments by transforming XML data into interactive dashboards and actionable insights.
+This project demonstrates an end-to-end operational analytics workflow using structured XML data and Power BI. The objective was to simulate the kind of system-performance monitoring used in engineering and aerospace environments — ingesting raw XML, transforming it through Power Query, and building interactive dashboards that surface KPIs, high-risk conditions, and operational trends.
 
-The project focused on:
-- XML data ingestion and transformation
-- KPI development and monitoring
-- Trend analysis
-- Comparative risk analysis
-- Interactive dashboard visualization
-- Operational performance reporting
+> **Business Question:** *Which systems are operating at elevated risk, what conditions predict failure classification, and how can KPI monitoring be structured to support faster operational decisions?*
 
-## Tools used
-  - Excel
-  - Power BI (Power Query)
-  - XML
-  - Python (to write the XML file)
+---
+
+## Tools Used
+
+| Phase     | Tool                  | Purpose                                                       |
+|-----------|-----------------------|---------------------------------------------------------------|
+| Generate  | Python                | Scripted creation of 1,000+ simulated system records in XML  |
+| Ingest    | Power Query (Excel)   | XML parsing and transformation into tabular structure        |
+| Clean     | Power Query           | Column standardization, type conversion, calculated fields   |
+| Visualize | Power BI              | Interactive dashboards for KPI monitoring and risk analysis  |
+
+---
 
 ## Dataset
-  The dataset contains 1,000+ simulated system records including:
-    - System ID
-    - Operational status
-    - Temperature
-    - Pressure
-    - Failure risk classification
-    - Date
 
-## Workflow 
-  1. XML Data Processing
-       - Imported XML data into Power Query and transformed nested structures into tabular datasets.
-  2. Data Cleaning
-       - Standardized column types
-       - Removed invalid values
-       - Created calculated risk indicators
-  3.Dashboard Development
-      -  Developed interactive Power BI dashboards to analyze operational performance and monitor high-risk system
-         conditions.
-      - Dashboard features include:
-          - KPI cards for average temperature, total systems, and high-risk percentages
-          - Trend analysis of average temperature over time by failure-risk category
-          - Comparative clustered visualizations analyzing failure-risk distribution across operational statuses
-          - Interactive slicers and filters for operational exploration
-          - Detailed tabular reporting for drill-down analysis
+The dataset contains 1,000+ simulated system performance records including:
 
-## Key Insights
-- High-risk systems consistently demonstrated elevated temperature and pressure readings.
-- Maintenance-status systems showed a higher concentration of high-risk classifications compared to active systems.
-- Temperature trends indicated increased operational risk during peak periods.
-- Comparative analysis revealed strong relationships between operational status and failure-risk distribution.
-  
+- System ID and operational status (Active, Maintenance, Offline)
+- Temperature and pressure readings
+- Failure risk classification (Low, Medium, High)
+- Date of record
+
+All records were generated programmatically in Python to simulate the kind of structured operational data common in engineering and infrastructure monitoring contexts.
+
+---
+
+## Workflow
+
+**1. XML Data Processing**
+Imported XML data into Power Query and transformed nested structures into flat, tabular datasets ready for analysis.
+
+**2. Data Cleaning**
+Standardized column data types, removed invalid values, and created calculated risk indicator fields to support classification analysis.
+
+**3. Dashboard Development**
+Built interactive Power BI dashboards covering four analytical dimensions:
+- KPI cards for average temperature, total system count, and high-risk percentage
+- Temperature trend analysis over time, segmented by failure-risk category
+- Comparative failure-risk distribution across operational statuses
+- Drill-down tabular reporting with interactive slicers and filters
+
+---
+
+## Key Findings
+
+- **High-risk systems consistently showed elevated temperature and pressure readings** relative to low- and medium-risk classifications, confirming these metrics as reliable early indicators of failure risk
+- **Maintenance-status systems had a higher concentration of high-risk classifications** than active systems, suggesting that systems entering maintenance are already operating in degraded conditions
+- **Temperature trends indicated increased operational risk during peak periods**, with high-risk spikes clustering around specific time windows
+- **Comparative analysis revealed a strong relationship between operational status and failure-risk distribution**, supporting the use of status-based monitoring thresholds for automated alerting
+
+---
+
+## Recommendations
+
+1. **Establish temperature and pressure thresholds as automated alert triggers** — the data shows clear separation between risk categories at specific reading levels, making rule-based monitoring feasible.
+2. **Prioritize pre-maintenance inspection protocols** for systems approaching Maintenance status, given their elevated risk concentration.
+3. **Incorporate time-of-period risk weighting** into operational planning to allocate resources ahead of historically high-risk windows.
+
+---
+
 ## Dashboard Preview
-<img width="1690" height="950" alt="xml_system_performance_dashboard" src="https://github.com/user-attachments/assets/816aa606-f589-4aee-874f-1832aa0fb94a" />
 
-## Skills Demonstrated
-- XML data processing
-- Data transformation using Power Query
-- Dashboard development in Power BI
-- KPI monitoring and reporting
-- Comparative data analysis
-- Trend analysis
-- Data visualization
-- Analytical problem-solving
-- Operational analytics
+[![System Performance Dashboard](xml_system_performance_dashboard.png)](xml_system_performance_dashboard.png)
+
+*Power BI dashboard showing KPI monitoring, risk trend analysis, and failure-risk distribution by operational status.*
+
+---
+
+## Repository Structure
+
+```
+xml_system_performance_analysis/
+├── system_data                                  # XML source data file
+├── xml_system_performance_analysis.pbit         # Power BI template file
+├── xml_system_performance_dashboard.png         # Dashboard screenshot
+└── README.md
+```
+
+---
+
+## Contact
+
+*Jace Cordell — [GitHub](https://github.com/jcordell0414) · [LinkedIn](https://www.linkedin.com/in/jcordell0414)*
