@@ -72,7 +72,8 @@ Built interactive Power BI dashboards covering four analytical dimensions:
 
 ## Dashboard Preview
 
-[![System Performance Dashboard](xml_system_performance_dashboard.png)](xml_system_performance_dashboard.png)
+[![System Performance Dashboard]](<img width="2560" height="1600" alt="operational_trends_dashboard" src="https://github.com/user-attachments/assets/dea708fd-c10e-4fb9-a8a4-1c184970ec4b" />
+)
 
 *Power BI dashboard showing KPI monitoring, risk trend analysis, and failure-risk distribution by operational status.*
 
